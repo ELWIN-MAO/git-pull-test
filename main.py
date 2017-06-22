@@ -20,6 +20,7 @@ latest_commit = repo.get_commits()[0]
 while True:
 	sleep(10)
 	commit = repo.get_commits()[0]
+	print(commit)
 	if commit != latest_commit:
 		latest_commit = commit
 		call("run.sh", shell=True)
